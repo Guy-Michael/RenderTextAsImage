@@ -4,13 +4,13 @@ String imageName;
 byte[] bytes;
 int imageWidth;
 int imageHeight;
-int pixelScale = 3;
+int pixelScale = 2;
 float colorScale = 1f;
 
 String fileName;
 void settings()
 {
-  loadImageByName("Romeo and Juliet  Entire Play.txt");
+  loadImageByName("bible.txt");
   calcWidthAndHeight();
   size(imageWidth * pixelScale, imageHeight * pixelScale);    
 }
@@ -23,10 +23,11 @@ void setup()
   {
     for (int j = 0; j < imageWidth * pixelScale; j+=pixelScale)
     {
-      if(k >= bytes.length - 2)
+      if(k >= bytes.length)
       {
         break;
       }
+      
       int blue = (0xff & bytes[k]);
       int green = ((0xff & bytes[k+1]));
       int red = ((0xff & bytes[k+2]));   
