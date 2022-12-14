@@ -4,13 +4,13 @@ String imageName;
 byte[] bytes;
 int imageWidth;
 int imageHeight;
-int pixelScale = 1;
+int pixelScale = 3;
 float colorScale = 1f;
 
 String fileName;
 void settings()
 {
-  loadImageByName("The Hitchhikers Guide to the Galaxy.txt");
+  loadImageByName("Romeo and Juliet  Entire Play.txt");
   calcWidthAndHeight();
   size(imageWidth * pixelScale, imageHeight * pixelScale);    
 }
@@ -45,7 +45,6 @@ void setup()
       k+=3;
     }
   }
-  storeImage();
 }
 
 public void calcWidthAndHeight()
